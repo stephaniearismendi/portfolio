@@ -1,0 +1,68 @@
+.root {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  background:
+    radial-gradient(120% 80% at 10% -10%, #12243d 0%, transparent 55%),
+    radial-gradient(90% 60% at 100% 0%, #1a1030 0%, transparent 50%),
+    linear-gradient(180deg, var(--bg-mid), var(--bg-deep));
+}
+
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(70px);
+  opacity: 0.55;
+  will-change: transform;
+  animation: aurora-drift 18s var(--ease-out) infinite;
+}
+
+.cyan {
+  width: min(52vw, 520px);
+  height: min(52vw, 520px);
+  top: -8%;
+  left: -6%;
+  background: radial-gradient(circle, var(--aurora-cyan), transparent 68%);
+}
+
+.coral {
+  width: min(48vw, 480px);
+  height: min(48vw, 480px);
+  top: 18%;
+  right: -10%;
+  background: radial-gradient(circle, var(--aurora-coral), transparent 70%);
+  animation-duration: 22s;
+  animation-delay: -4s;
+}
+
+.lime {
+  width: min(42vw, 420px);
+  height: min(42vw, 420px);
+  bottom: 4%;
+  left: 28%;
+  background: radial-gradient(circle, var(--aurora-lime), transparent 72%);
+  opacity: 0.28;
+  animation-duration: 26s;
+  animation-delay: -8s;
+}
+
+.noise {
+  position: absolute;
+  inset: 0;
+  opacity: 0.08;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  mix-blend-mode: soft-light;
+  pointer-events: none;
+}
+
+.vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    80% 70% at 50% 30%,
+    transparent 30%,
+    rgba(5, 11, 20, 0.55) 100%
+  );
+  pointer-events: none;
+}

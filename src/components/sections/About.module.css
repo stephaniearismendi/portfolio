@@ -1,0 +1,7 @@
+.body {
+  display: grid;
+  gap: var(--space-4);
+  max-width: 42rem;
+  color: var(--text-soft);
+  font-size: 1.08rem;
+}

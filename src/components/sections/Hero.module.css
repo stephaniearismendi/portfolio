@@ -1,0 +1,78 @@
+.hero {
+  position: relative;
+  isolation: isolate;
+  min-height: calc(100svh - var(--header-h));
+  display: grid;
+  align-items: center;
+  padding: var(--space-6) var(--space-5) var(--space-8);
+  overflow: hidden;
+}
+
+.visual {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.copy {
+  position: relative;
+  z-index: 1;
+  width: min(100%, var(--max-width));
+  margin-inline: auto;
+  max-width: 38rem;
+  justify-self: start;
+  animation: rise-in 900ms var(--ease-out) both;
+}
+
+.greeting {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 6vw, 4.2rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  background: linear-gradient(
+    105deg,
+    #ffffff 20%,
+    var(--aurora-cyan) 50%,
+    var(--aurora-coral) 80%
+  );
+  background-size: 180% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer 8s linear infinite alternate;
+}
+
+.role {
+  margin-top: var(--space-3);
+  color: var(--text-soft);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.intro {
+  margin-top: var(--space-5);
+  max-width: 32rem;
+  color: var(--text-soft);
+  font-size: 1.15rem;
+  line-height: 1.6;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  margin-top: var(--space-6);
+}
+
+@media (max-width: 720px) {
+  .hero {
+    min-height: auto;
+    padding-top: var(--space-7);
+    padding-bottom: var(--space-7);
+    align-items: center;
+  }
+}
