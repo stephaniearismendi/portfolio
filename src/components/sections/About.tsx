@@ -6,7 +6,7 @@ export function About() {
   const { content } = useLanguage()
 
   return (
-    <Section id="about" title={content.about.title}>
+    <Section id="about" title={content.about.title} layout="split">
       <div className={styles.body}>
         {content.about.body.map((paragraph) => (
           <p key={paragraph}>{paragraph}</p>

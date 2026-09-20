@@ -8,19 +8,19 @@ export function Footer() {
 
   return (
     <footer className={styles.footer}>
-      <div className={styles.inner}>
+      <div className={`container ${styles.inner}`}>
         <p className={styles.copy}>
           © {year} {content.meta.name}
         </p>
-        <p className={styles.note}>{content.footer.note}</p>
-        <a
-          className={styles.link}
-          href={SITE.github}
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          GitHub
-        </a>
+        <div className={styles.links}>
+          <a href={SITE.linkedin} target="_blank" rel="noreferrer noopener">
+            LinkedIn
+          </a>
+          <a href={SITE.github} target="_blank" rel="noreferrer noopener">
+            GitHub
+          </a>
+          <a href={`mailto:${SITE.email}`}>Email</a>
+        </div>
       </div>
     </footer>
   )

@@ -1,7 +1,12 @@
 .body {
   display: grid;
-  gap: var(--space-4);
-  max-width: 42rem;
-  color: var(--text-soft);
-  font-size: 1.08rem;
+  gap: 1.25rem;
+  max-width: var(--prose);
+  color: var(--text-muted);
+  font-size: 1.0625rem;
+  line-height: 1.7;
+}
+
+.body p {
+  text-wrap: pretty;
 }
