@@ -1,44 +1,40 @@
 .groups {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: var(--space-5);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem 2.5rem;
 }
 
 .groupTitle {
-  margin-bottom: var(--space-3);
-  font-size: 0.85rem;
+  margin-bottom: 0.85rem;
+  font-size: 0.75rem;
   font-weight: 700;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--text-faint);
+  color: var(--text-dim);
 }
 
 .items {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.65rem;
+  flex-direction: column;
+  gap: 0.55rem;
 }
 
-.item {
-  padding: 0.55rem 0.95rem;
-  border-radius: var(--radius-pill);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  background:
-    linear-gradient(
-      145deg,
-      rgba(255, 255, 255, 0.14),
-      rgba(255, 255, 255, 0.04)
-    ),
-    rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  font-weight: 600;
-  font-size: 0.95rem;
+.items li {
+  padding-bottom: 0.55rem;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.98rem;
+  font-weight: 500;
+  color: var(--text-muted);
 }
 
-@media (max-width: 860px) {
+.items li:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+@media (max-width: 640px) {
   .groups {
     grid-template-columns: 1fr;
-    gap: var(--space-6);
+    gap: 2rem;
   }
 }
