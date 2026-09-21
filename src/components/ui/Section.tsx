@@ -8,6 +8,7 @@ type SectionProps = {
   subtitle?: string
   children: ReactNode
   className?: string
+  layout?: 'stack' | 'split'
 }
 
 export function Section({
@@ -16,6 +17,7 @@ export function Section({
   subtitle,
   children,
   className = '',
+  layout = 'stack',
 }: SectionProps) {
   const { ref, visible } = useReveal<HTMLElement>()
 
@@ -32,12 +34,20 @@ export function Section({
         .filter(Boolean)
         .join(' ')}
     >
-      <div className={styles.inner}>
+      <div
+        className={[
+          'container',
+          styles.inner,
+          layout === 'split' ? styles.split : '',
+        ]
+          .filter(Boolean)
+          .join(' ')}
+      >
         <header className={styles.header}>
           <h2 className={styles.title}>{title}</h2>
           {subtitle ? <p className={styles.subtitle}>{subtitle}</p> : null}
         </header>
-        {children}
+        <div className={styles.content}>{children}</div>
       </div>
     </section>
   )

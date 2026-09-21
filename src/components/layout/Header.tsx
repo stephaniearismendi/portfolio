@@ -8,7 +8,7 @@ export function Header() {
   const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 18)
+    const onScroll = () => setScrolled(window.scrollY > 12)
     onScroll()
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
@@ -16,10 +16,9 @@ export function Header() {
 
   return (
     <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
-      <div className={styles.bar}>
+      <div className={`container ${styles.bar}`}>
         <a href="#top" className={styles.brand}>
-          <span className={styles.mark} aria-hidden="true" />
-          <span className={styles.name}>{content.meta.name}</span>
+          {content.meta.name}
         </a>
 
         <nav className={styles.nav} aria-label="Primary">
@@ -30,9 +29,7 @@ export function Header() {
           ))}
         </nav>
 
-        <div className={styles.actions}>
-          <LanguageToggle />
-        </div>
+        <LanguageToggle />
       </div>
     </header>
   )

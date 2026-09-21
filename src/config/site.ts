@@ -1,5 +1,5 @@
 export const SITE = {
   email: 'stephaniearismendi17@gmail.com',
   github: 'https://github.com/stephaniearismendi',
-  githubLabel: 'GitHub',
+  linkedin: 'https://www.linkedin.com/in/stephanie-arismendi-escobar-125935a1',
 } as const

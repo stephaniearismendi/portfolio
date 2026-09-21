@@ -12,8 +12,8 @@ export function Hero() {
         <EventStreamVisual />
       </div>
 
-      <div className={styles.copy}>
-        <h1 className={styles.greeting}>{content.hero.greeting}</h1>
+      <div className={`container ${styles.copy}`}>
+        <h1 className={styles.brand}>{content.meta.name}</h1>
         <p className={styles.role}>{content.meta.role}</p>
         <p className={styles.intro}>{content.hero.intro}</p>
         <div className={styles.actions}>

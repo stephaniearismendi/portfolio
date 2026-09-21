@@ -5,8 +5,7 @@ export function AuroraBackground() {
     <div className={styles.root} aria-hidden="true">
       <div className={`${styles.blob} ${styles.cyan}`} />
       <div className={`${styles.blob} ${styles.coral}`} />
-      <div className={`${styles.blob} ${styles.lime}`} />
-      <div className={styles.noise} />
+      <div className={styles.grid} />
       <div className={styles.vignette} />
     </div>
   )
