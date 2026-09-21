@@ -62,10 +62,23 @@ export const es: Content = {
     subtitle: 'Proyectos personales y experimentos',
     items: [
       {
-        name: 'Tu proyecto aqui',
-        description: 'Anade tus proyectos personales - APIs, scripts, herramientas, automatizaciones.',
-        stack: ['Tech', 'Stack', 'Aqui'],
-        repo: 'https://github.com/stephaniearismendi',
+        name: 'Huchapp',
+        description:
+          'PWA de finanzas personales local-first: React/TypeScript + Vite, datos en IndexedDB (Dexie), import de extractos Excel y despliegue estático en Cloudflare. Privacidad por diseño — sin servidor de datos.',
+        stack: [
+          'React 19',
+          'TypeScript',
+          'Vite',
+          'Tailwind 4',
+          'Zustand',
+          'Dexie',
+          'i18next',
+          'PWA',
+          'ExcelJS',
+          'Vitest',
+        ],
+        link: 'https://huchapp.stephaniearismendi17.workers.dev/',
+        repo: 'https://github.com/stephaniearismendi/local-finance-tracker',
       },
     ],
   },
